@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "SetnJsonSample.h"
+#import "SetnJsonFeed.h"
+#import "SetnJsonEntry.h"
 
 @interface AppDelegate ()
 
@@ -15,7 +18,9 @@
 @implementation AppDelegate
 
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    [self restkitInit];
     // Override point for customization after application launch.
     return YES;
 }
@@ -40,6 +45,85 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (void)restkitInit
+{
+    [[AFNetworkActivityIndicatorManager sharedManager] setEnabled:YES];
+    
+//    https://itunes.apple.com/tw/rss/topalbums/limit=20/json
+    
+    
+    
+    NSURL *baseURL = [NSURL URLWithString:@"https://itunes.apple.com/tw/rss/"];
+    
+    AFHTTPClient* client = [[AFHTTPClient alloc] initWithBaseURL:baseURL];
+    [client setDefaultHeader:@"Accept" value:RKMIMETypeJSON];
+    RKObjectManager *objectManager = [[RKObjectManager alloc] initWithHTTPClient:client];
+    [RKMIMETypeSerialization registerClass:[RKNSJSONSerialization class] forMIMEType:@"text/javascript"];
+    [objectManager.HTTPClient setAuthorizationHeaderWithUsername:@"ddh2" password:@"pw53757460"];
+    
+    
+    NSDateFormatter *dateFormatter = [NSDateFormatter new];
+    dateFormatter.dateFormat = @"y-M-d";
+    dateFormatter.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"];
+    dateFormatter.timeZone = nil;
+    [[RKValueTransformer defaultValueTransformer] insertValueTransformer:dateFormatter atIndex:0];
+    
+    [objectManager addResponseDescriptor:[self setnJsonResponseDescriptor]];
+}
+
+- (UIViewController *)goStoryboardViewController:(NSString *)Identifier
+{
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    
+    UIViewController *viewController = [storyboard instantiateViewControllerWithIdentifier:Identifier];
+    
+    return viewController;
+}
+
+#pragma mark RKObjectMapping
+
+-(RKObjectMapping *) setnSampleMapping
+{
+    RKObjectMapping *RKMapping = [RKObjectMapping mappingForClass:[SetnJsonSample class]];
+    [RKMapping addRelationshipMappingWithSourceKeyPath:@"feed"
+                                               mapping:[self setnFeedMapping]];
+
+    return RKMapping;
+}
+
+-(RKObjectMapping *) setnFeedMapping
+{
+    RKObjectMapping *RKMapping = [RKObjectMapping mappingForClass:[SetnJsonFeed class]];
+    NSDictionary *mapping = @{
+                              @"author"  : @"author",
+                              };
+    
+    [RKMapping addAttributeMappingsFromDictionary:mapping];
+    [RKMapping addRelationshipMappingWithSourceKeyPath:@"entry"
+                                                   mapping:[self setnEntryMapping]];
+    
+    return RKMapping;
+}
+
+-(RKObjectMapping *) setnEntryMapping
+{
+    RKObjectMapping *RKMapping = [RKObjectMapping mappingForClass:[SetnJsonEntry class]];
+    [RKMapping addAttributeMappingsFromDictionary:[SetnJsonEntry mapping]];
+    
+    return RKMapping;
+}
+
+#pragma mark RKResponseDescriptor
+
+-(RKResponseDescriptor *) setnJsonResponseDescriptor
+{
+    return [RKResponseDescriptor responseDescriptorWithMapping:[self setnSampleMapping]
+                                                        method:RKRequestMethodGET
+                                                   pathPattern:@"topalbums/limit=20/json"
+                                                       keyPath:nil
+                                                   statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
 }
 
 @end

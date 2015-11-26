@@ -10,12 +10,16 @@
 		390710EC74284EC90885A283 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 31ACD022B7192863A488B141 /* libPods.a */; };
 		F58C41911C059D2D00033545 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F58C41901C059D2D00033545 /* main.m */; };
 		F58C41941C059D2D00033545 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F58C41931C059D2D00033545 /* AppDelegate.m */; };
-		F58C41971C059D2D00033545 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F58C41961C059D2D00033545 /* ViewController.m */; };
 		F58C419A1C059D2D00033545 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F58C41981C059D2D00033545 /* Main.storyboard */; };
 		F58C419C1C059D2D00033545 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F58C419B1C059D2D00033545 /* Assets.xcassets */; };
 		F58C419F1C059D2D00033545 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F58C419D1C059D2D00033545 /* LaunchScreen.storyboard */; };
 		F58C41AA1C059D2D00033545 /* setnSampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F58C41A91C059D2D00033545 /* setnSampleTests.m */; };
 		F58C41B51C059D2D00033545 /* setnSampleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F58C41B41C059D2D00033545 /* setnSampleUITests.m */; };
+		F58C41C41C05A58100033545 /* SetnJsonFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = F58C41C31C05A58100033545 /* SetnJsonFeed.m */; };
+		F58C41C71C05A8EA00033545 /* SetnJsonEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = F58C41C61C05A8EA00033545 /* SetnJsonEntry.m */; };
+		F58C41CD1C05B55200033545 /* SetnJsonSample.m in Sources */ = {isa = PBXBuildFile; fileRef = F58C41CC1C05B55200033545 /* SetnJsonSample.m */; };
+		F5D15C371C067322008C54E8 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D15C361C067322008C54E8 /* MainViewController.m */; };
+		F5D15C401C068B68008C54E8 /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D15C3F1C068B68008C54E8 /* PhotoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,8 +47,6 @@
 		F58C41901C059D2D00033545 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F58C41921C059D2D00033545 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F58C41931C059D2D00033545 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		F58C41951C059D2D00033545 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		F58C41961C059D2D00033545 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		F58C41991C059D2D00033545 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F58C419B1C059D2D00033545 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F58C419E1C059D2D00033545 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -55,6 +57,16 @@
 		F58C41B01C059D2D00033545 /* setnSampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = setnSampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F58C41B41C059D2D00033545 /* setnSampleUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = setnSampleUITests.m; sourceTree = "<group>"; };
 		F58C41B61C059D2D00033545 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F58C41C21C05A58100033545 /* SetnJsonFeed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetnJsonFeed.h; sourceTree = "<group>"; };
+		F58C41C31C05A58100033545 /* SetnJsonFeed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetnJsonFeed.m; sourceTree = "<group>"; };
+		F58C41C51C05A8EA00033545 /* SetnJsonEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetnJsonEntry.h; sourceTree = "<group>"; };
+		F58C41C61C05A8EA00033545 /* SetnJsonEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetnJsonEntry.m; sourceTree = "<group>"; };
+		F58C41CB1C05B55200033545 /* SetnJsonSample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetnJsonSample.h; sourceTree = "<group>"; };
+		F58C41CC1C05B55200033545 /* SetnJsonSample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetnJsonSample.m; sourceTree = "<group>"; };
+		F5D15C351C067322008C54E8 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		F5D15C361C067322008C54E8 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		F5D15C3E1C068B68008C54E8 /* PhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoViewController.h; sourceTree = "<group>"; };
+		F5D15C3F1C068B68008C54E8 /* PhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,10 +137,10 @@
 		F58C418E1C059D2D00033545 /* setnSample */ = {
 			isa = PBXGroup;
 			children = (
+				F5D15C421C068B93008C54E8 /* ViewController */,
+				F5D15C411C068B82008C54E8 /* Module */,
 				F58C41921C059D2D00033545 /* AppDelegate.h */,
 				F58C41931C059D2D00033545 /* AppDelegate.m */,
-				F58C41951C059D2D00033545 /* ViewController.h */,
-				F58C41961C059D2D00033545 /* ViewController.m */,
 				F58C41981C059D2D00033545 /* Main.storyboard */,
 				F58C419B1C059D2D00033545 /* Assets.xcassets */,
 				F58C419D1C059D2D00033545 /* LaunchScreen.storyboard */,
@@ -162,6 +174,30 @@
 				F58C41B61C059D2D00033545 /* Info.plist */,
 			);
 			path = setnSampleUITests;
+			sourceTree = "<group>";
+		};
+		F5D15C411C068B82008C54E8 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				F58C41CB1C05B55200033545 /* SetnJsonSample.h */,
+				F58C41CC1C05B55200033545 /* SetnJsonSample.m */,
+				F58C41C21C05A58100033545 /* SetnJsonFeed.h */,
+				F58C41C31C05A58100033545 /* SetnJsonFeed.m */,
+				F58C41C51C05A8EA00033545 /* SetnJsonEntry.h */,
+				F58C41C61C05A8EA00033545 /* SetnJsonEntry.m */,
+			);
+			name = Module;
+			sourceTree = "<group>";
+		};
+		F5D15C421C068B93008C54E8 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F5D15C351C067322008C54E8 /* MainViewController.h */,
+				F5D15C361C067322008C54E8 /* MainViewController.m */,
+				F5D15C3E1C068B68008C54E8 /* PhotoViewController.h */,
+				F5D15C3F1C068B68008C54E8 /* PhotoViewController.m */,
+			);
+			name = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -345,9 +381,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F58C41971C059D2D00033545 /* ViewController.m in Sources */,
+				F5D15C401C068B68008C54E8 /* PhotoViewController.m in Sources */,
+				F58C41CD1C05B55200033545 /* SetnJsonSample.m in Sources */,
+				F5D15C371C067322008C54E8 /* MainViewController.m in Sources */,
+				F58C41C41C05A58100033545 /* SetnJsonFeed.m in Sources */,
 				F58C41941C059D2D00033545 /* AppDelegate.m in Sources */,
 				F58C41911C059D2D00033545 /* main.m in Sources */,
+				F58C41C71C05A8EA00033545 /* SetnJsonEntry.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
